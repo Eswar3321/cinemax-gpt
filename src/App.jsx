@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Body from './components/Body'
 import './App.css'
 
 function App() {
@@ -6,10 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
-        <p className="text-5xl font-bold text-green-800">Hello </p>
-      </div>
-    
+      <Body />
     </>
   )
 }
