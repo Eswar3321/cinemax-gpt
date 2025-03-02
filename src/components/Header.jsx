@@ -1,9 +1,32 @@
 import React from 'react'
+import { profileIcon, netflixLogo } from '../utils/constants'
+import {auth} from '../utils/firebase';
+import { useNavigate } from 'react-router-dom';
+import { signOut} from "firebase/auth";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const user = useSelector((store) => store.user);
+  console.log(user);
+  const handleSignOut = () => {
+    signOut(auth)
+    .then(() => {
+      navigate('/');
+    })
+    .catch((error) => {
+      navigate('./error');
+    });
+  }
+
   return (
-    <div className="z-9 w-screen">
-      <img className="w-44" src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="background image"/>
+    <div className="flex justify-between items-center pr-3 md:pr-6 bg-gradient-to-b from-black to-transparent z-9 w-screen">
+      <img className=" w-32 md:w-44" src={netflixLogo} alt="background image"/>
+      {user && <div className="flex gap-2 items-center">
+        <img src={profileIcon} className="w-6 md:w-10 h-6 md:h-10" alt="profileIcon" />
+        <span className="text-white font-bold">Hi, {user.displayName}</span>
+        <button onClick={handleSignOut} className="font-bold text-black cursor-pointer appearance-none bg-transparent border-none !px-2 !py-1 m-0 outline-none">Sign Out</button>
+      </div>}
     </div>
   )
 }

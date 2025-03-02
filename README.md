@@ -11,6 +11,24 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
+#NetflixGPT
+
+- Build with Vite
+- Configured TailwindCSS
+- Header
+- Routing of App
+- Login Form
+- Sign up Form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploying our app to production
+- Create SignUp User Account
+- Implement Sign in User Api
+- Created Redux Store with UserSlice
+- Implemented signout feature
+- Update profile
+
 Structure:
 -Login/Sign Up
 -Sign In/ Sign Up Form
