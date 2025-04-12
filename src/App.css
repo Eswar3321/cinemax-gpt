@@ -4,8 +4,3 @@ button:focus,
 input:focus {
   outline: none;
 }
-
-button:hover,
-input:hover {
-  border: none;
-}

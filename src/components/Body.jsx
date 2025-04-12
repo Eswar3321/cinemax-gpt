@@ -34,6 +34,10 @@ const Body = () => {
   return (
     <div>
       <RouterProvider router={appRouter}/>
+      <footer className="text-center text-sm text-gray-500 mt-10">
+        This is a personal demo project for educational purposes. Not affiliated with any real streaming service.
+      </footer>
+
     </div>
   )
 }
