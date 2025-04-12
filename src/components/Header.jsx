@@ -21,7 +21,7 @@ const Header = ({isSignIn}) => {
 
   return (
     <div className="flex justify-between items-center pr-3 md:pr-6 bg-gradient-to-b from-black to-transparent z-9 w-screen">
-      <img className=" w-32 md:w-44" src="\public\cinemaxlogo.png" alt="background image"/>
+      <img className=" w-32 md:w-44" src="/cinemaxlogo.png" alt="background image"/>
       {!isSignIn && <div className="flex gap-2 items-center">
         <img src={profileIcon} className="w-6 md:w-10 h-6 md:h-10" alt="profileIcon" />
         <span className="text-white font-bold">Hi, {user.displayName}</span>
