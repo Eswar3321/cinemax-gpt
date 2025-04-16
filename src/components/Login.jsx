@@ -61,7 +61,7 @@ const Login = () => {
   }
 
   return (
-   <div className="relative h-screen w-screen">
+   <div className="relative h-screen w-full">
     <div className="absolute inset-0 bg-cover bg-center bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/04ef06cc-5f81-4a8e-8db0-6430ba4af286/web/IN-en-20250224-TRIFECTA-perspective_3a9c67b5-1d1d-49be-8499-d179f6389935_small.jpg')] before:content-[''] before:absolute before:inset-0 before:bg-black/50"></div>
     <div className="relative z-1 text-white flex flex-col items-center h-full">
     <Header />

@@ -6,7 +6,6 @@ import { signOut, onAuthStateChanged} from "firebase/auth";
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 
-
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -35,13 +34,15 @@ const Header = () => {
   }
 
   return (
-    <div className="flex absolute justify-between items-center bg-gradient-to-b from-black to-transparent z-9 w-screen pr-4 md:px-12">
-      <img className=" w-32 md:w-44" src="/cinemaxlogo.png" alt="background image"/>
-      {user && <div className="flex gap-2 items-center">
-        <img src={PROFILE_ICON} className="w-6 md:w-10 h-6 md:h-10" alt="PROFILE_ICON" />
-        <span className="text-white font-bold">Hi, {user.displayName}</span>
-        <button onClick={handleSignOut} className="font-bold cursor-pointer bg-transparent text-white border border-white hover:border-blue-500 !px-2 !py-1 m-0 outline-none">Sign Out</button>
-      </div>}
+    <div className="absolute w-full bg-gradient-to-b from-black to-transparent z-9">
+      <div className="flex justify-between items-center px-4 md:pl-8 md:pr-12">
+        <img className="w-32 md:w-44" src="/cinemaxlogo.png" alt="background image"/>
+        {user && <div className="flex gap-2 items-center">
+          <img src={PROFILE_ICON} className="w-6 md:w-10 h-6 md:h-10" alt="PROFILE_ICON" />
+          <span className="text-white font-bold">Hi, {user.displayName}</span>
+          <button onClick={handleSignOut} className="font-bold cursor-pointer bg-transparent text-white border border-white hover:border-blue-500 !px-2 !py-1 m-0 outline-none">Sign Out</button>
+        </div>}
+      </div>
     </div>
   )
 }

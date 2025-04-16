@@ -1,2 +1,3 @@
 export const PROFILE_ICON = "https://occ-0-2042-3662.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229";
 export const API_OPTIONS = {method: 'GET', headers: {accept: 'application/json', Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OGRjNzY2ZGQxMzU4ZTRkMGU4YTFlYjIyMzBhZDlkMiIsIm5iZiI6MTczNTEyNDc3Mi4xMTgsInN1YiI6IjY3NmJlNzI0YmQ2YTliMTY5NjY0YTJjYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bHaJzUF7okS6m1Ur-SqCWZN7APYCI58yfmmoOL_fYns'}};
+export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w500/"; 
