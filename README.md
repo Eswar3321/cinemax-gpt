@@ -49,6 +49,8 @@ If you are developing a production application, we recommend using TypeScript an
 - Made the Home page amazing with Tailwind CSS
 - usePopularMovies custom hook
 - useTrendingMovies custom hook
+- GPT Search Page
+- GPT Search Bar
 
 Structure:
 -Login/Sign Up

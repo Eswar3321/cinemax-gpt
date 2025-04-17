@@ -1,28 +1,31 @@
 import Header from './Header'
+import GptSearchPage from './GptSearchPage'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import usePopularMovies from '../hooks/usePopularMovies'
 import useTopRatedMovies from '../hooks/useTopRatedMovies'
 import useUpcomingMovies from '../hooks/useUpcomingMovies'
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+  const showGptSearch = useSelector(store => store.gpt.showGptSearch);
   // Fetch data from TMDB API and update store
   useNowPlayingMovies();
   usePopularMovies();
   useTopRatedMovies();
   useUpcomingMovies();
-  const movies = useSelector(store => store.movies);
   return (
-    <div className="w-full">
+    <div>
       <Header/>
-      <div className="relative w-full">
+      {showGptSearch ? <GptSearchPage/> : 
+      <div className="relative">
         <MainContainer/>
-        <div className="relative z-10 w-full">
+        <div className="relative z-10">
           <SecondaryContainer className="px-4 md:px-12"/>
         </div>
       </div>
+      }
     </div>
   );
 };

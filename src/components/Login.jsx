@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from '../utils/firebase'
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import {BACKGROUND_IMAGE} from '../utils/constants'
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -62,9 +63,12 @@ const Login = () => {
 
   return (
    <div className="relative h-screen w-full">
-    <div className="absolute inset-0 bg-cover bg-center bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/04ef06cc-5f81-4a8e-8db0-6430ba4af286/web/IN-en-20250224-TRIFECTA-perspective_3a9c67b5-1d1d-49be-8499-d179f6389935_small.jpg')] before:content-[''] before:absolute before:inset-0 before:bg-black/50"></div>
-    <div className="relative z-1 text-white flex flex-col items-center h-full">
-    <Header />
+      <div className="absolute inset-0 -z-10 bg-cover bg-center">
+        <img src={BACKGROUND_IMAGE} alt="Background" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>    
+      <div className="relative z-1 text-white flex flex-col items-center h-full">
+      <Header />
       <div className="flex items-center flex-1">
         <form onSubmit={(e) => e.preventDefault()} className="bg-black/60 p-8 md:p-10 w-80 md:w-100 mx-auto">
         <p className="text-yellow-400 text-sm mb-2">
@@ -79,7 +83,7 @@ const Login = () => {
           <button  onClick={handleButtonClick} className="p-2 mt-4  !bg-red-500 text-white inline-block w-full">{isSignIn ? "Sign In" : "Sign Up"}</button>
           <p className="mt-8 cursor-pointer" onClick={toggleForm}>{isSignIn ? "New to Cinemax? Sign up now." : "Already Registered? Sign In Now."}</p>
         </form>
-      </div>    
+      </div>
     </div>
   </div>
   )
