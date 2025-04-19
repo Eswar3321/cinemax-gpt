@@ -21,7 +21,7 @@ const Body = () => {
     <div className="w-full">
       <RouterProvider router={appRouter}/>
       <footer className="text-center text-xl text-gray-500 p-10">
-        This is a personal demo project for lerning purposes. Not affiliated with any real streaming service.
+        This is a personal demo project for learning purposes. Not affiliated with any real streaming service.
       </footer>
     </div>
   )
