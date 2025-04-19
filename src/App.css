@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 24rem;
+}
+
 button:focus,
 input:focus {
   outline: none;
