@@ -3,7 +3,7 @@ import { Info } from 'lucide-react';
 
 const VideoTitle = ({title, overview}) => {
   return (
-    <div className="absolute w-full aspect-video pt-[20%] px-4 md:px-12">
+    <div className="absolute w-full aspect-video pt-[55%] md:pt-[20%] px-4 md:px-12">
       <h1 className="text-2xl md:text-6xl font-bold text-white">{title}</h1>
       <p className="md:w-1/3 my-4 text-white">{overview}</p>
       <div className="flex gap-3 my-4">

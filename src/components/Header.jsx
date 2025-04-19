@@ -8,13 +8,14 @@ import { addUser, removeUser } from '../utils/userSlice';
 import { toggleGptSearchView } from '../utils/gptSlice';
 import {SUPPORTED_LANGUAGES} from '../utils/constants';
 import {changeLanguage} from '../utils/configSlice';
+import { addResultMovies } from '../utils/gptSlice';
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const showGptSearch = useSelector(store => store.gpt.showGptSearch);
-  
+  // const movieNames = useSelector(store => store.gpt.moviesNames);  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -40,6 +41,7 @@ const Header = () => {
   const handleGptSearch = () => {
     // Toggle GPT Search
     dispatch(toggleGptSearchView())
+    !showGptSearch && dispatch(addResultMovies({moviesNames: null}));
   }
 
   const handleLanguageChange = (e) => {
