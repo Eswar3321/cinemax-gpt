@@ -51,6 +51,15 @@ If you are developing a production application, we recommend using TypeScript an
 - useTrendingMovies custom hook
 - GPT Search Page
 - GPT Search Bar
+- Multi Language Feature
+- Integrated Gemini AI for movie suggestions
+- Get movie result from TMDB for AI suggested movies
+- Result added in gpt slice
+- Reused MovieList component to show result movies
+- Memoization
+- Added .env files
+- Added .env in git ignore
+- Make responsive
 
 Structure:
 -Login/Sign Up
