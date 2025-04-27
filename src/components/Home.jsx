@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux'
 
 const Home = () => {
   const showGptSearch = useSelector(store => store.gpt.showGptSearch);
+  const trailerVideo = useSelector(store => store.movies?.trailerVideo);  
+
   // Fetch data from TMDB API and update store
   useNowPlayingMovies();
   usePopularMovies();
@@ -22,7 +24,7 @@ const Home = () => {
       <div className="relative">
         <MainContainer/>
         <div className="relative z-10">
-          <SecondaryContainer className="px-4 md:px-12"/>
+         {trailerVideo && <SecondaryContainer className="px-4 md:px-12"/>}
         </div>
       </div>
       }

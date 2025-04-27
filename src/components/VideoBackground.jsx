@@ -3,7 +3,7 @@ import useMovieTrailer from '../hooks/useMovieTrailer'
 
 const VideoBackground = ({movieId}) => {
   useMovieTrailer(movieId);
-  const trailerVideo = useSelector(store => store.movies?.trailerVideo);  
+  const trailerVideo = useSelector(store => store.movies?.trailerVideo);
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden">
       <div className="relative w-full h-full">
